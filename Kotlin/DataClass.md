@@ -51,3 +51,15 @@ copy의 복사는 얕은 복사이므로 var 대신 val을 쓰도록 권장된�
 - 깊은 복사 : 원본 그 자체를 복사하여 복사 객체의 프로퍼티를 변경하더라도 원본의 프로퍼티는 변경되지 않는다 
   
 ### componentN()
+구조 분해 선언을 위한 메소드다.  
+데이터 클래스와 같은 복합 데이터 유형을 각각 개별 변수로 분해한다.  
+데이터 클래스에는 이미 컴파일러가 이 메소드를 구현해 놓았기 때문에 다음과 같이 사용할 수 있다.  
+```Kotlin
+data class Person(val name: String, val age: Int, val email: String)
+```
+```Kotlin
+val person = Person("Alice", 27, "alice@example.com")
+val (name, age, email) = person
+```
+마지막에 person을 구조 분해했다.  
+이 결과 name에는 Alice, age에는 27, email에는 "alice@example.com"이 할당된다.
