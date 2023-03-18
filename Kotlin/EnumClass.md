@@ -29,3 +29,44 @@ enum class는 상수 값의 타입 안정성을 보장한다.
 컴파일 타임에 확인이 된다.  
 타입 에러가 나더라도 프로그램 실행 전에 고칠 수 있으므로,  
 타입 안정성을 보장한다고 볼 수 있다.
+
+### Sealed class
+enum class의 확장 개념으로 표현된다.  
+sealed class는 abstract class이다.  
+또한 private 생성자만 갖는다.  
+sealed class의 서브 클래스들은 같은 패키지 내에 선언되어야 한다.  
+서브 클래스는 object, data class, class가 될 수 있다.  
+  
+enum class와는 다르게, 여러 개의 인스턴스를 생성할 수 있다.  
+enum class는 상수들이 단일 인스턴스로만 존재한다.  
+  
+sealed class는 상태관리에 용이하다.  
+로딩 상태, 완료 상태, 실패 상태와 같은 상태에 대한 클래스를 사용할 때 많이 사용된다. 
+  
+또한 when과 같이 사용할 때 매우 유용하다.  
+when 식에서 sealed class 서브 클래스에 대한 분기 처리를 할 때,  
+컴파일러가 모든 서브 클래스에 대해서 처리를 해주었는지 확인을 해준다.  
+```Kotlin
+sealed class Fruit{
+  object Banana: Fruit()
+  object Apple: Fruit()
+  object Orange: Fruit()
+}
+```
+```Kotlin
+val fruit: Fruit = Fruit.Banana
+val result: String = when(fruit){
+  is Fruit.Banana -> "banana"
+  is Fruit.Apple -> "apple"
+  is Fruit.Orange -> "orange"
+}
+```
+위와 같이 모든 서브 클래스에 대해서 처리를 해주었다면 컴파일 에러가 나지 않지만,  
+다음과 같은 코드에서는 에러가 난다.
+```Kotlin
+val fruit: Fruit = Fruit.Banana
+val result: String = when(fruit){
+  is Fruit.Banana -> "banana"
+  is Fruit.Apple -> "apple"
+}
+```
