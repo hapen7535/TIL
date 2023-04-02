@@ -22,7 +22,7 @@ LiveData는 LifecycleOwner에 바인딩되어 있어,
 LifecycleOwner가 비활성화 되어,  
 LiveData의 값이 ViewModel에서 바뀌더라도 Activity가 모르게 된다.  
 
-Activity A가 onResume() 메소드를 호출하는 상태였다가,
-Activity B가 호출돼서 A가 바라보고 있는 LiveData의 값은 setValue를 통해 바뀐다면 바뀌기 이전의 값을 알고 있을 것이다.
-Activity B가 호출돼서 A가 onPause()를 호출하는 상태가 되었기 때문이다.
+Activity A가 onResume() 메소드를 호출하는 상태였다가,  
+Activity B가 호출돼서 A가 바라보고 있는 LiveData의 값은 setValue를 통해 바뀐다면 바뀌기 이전의 값을 알고 있을 것이다.  
+Activity B가 호출돼서 A가 onPause()를 호출하는 상태가 되었기 때문이다.  
 PAUSED 상태라면 해당 LifecycleOwner가 비활성화 되므로 최신 값을 알지 못한다.
