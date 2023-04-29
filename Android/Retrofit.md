@@ -1,4 +1,9 @@
 ## Retrofit
+### Retrofit
+okhttp 기반으로 만들어진 네트워킹 라이브러리.  
+http API를 interface 형식으로 호출할 수 있도록 도와준다.  
+이를 사용하면 connection 설정, input / output stream 생성 및 할당 등과 같은 반복적인 작업들을 하지 않아도 된다.
+
 ### Multipart로 이미지 업로드
 #### Multipart : http를 통해 파일을 서버로 전송하기 위해 사용되는 Content-type.
 Content-type : Body에 들어가는 데이터 타입을 명시해주는 것  
