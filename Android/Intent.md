@@ -8,3 +8,7 @@
   - Broadcast 전달
     - Intent를 sendBroadcast() 혹은 sendOrderedBroadcast()에 전달하면 다른 앱에 Broadcast를 전달할 수 있다.
 
+### 인텐트 필터 
+  - manifest 파일에 들어가 있는 표현이다.
+  - 해당 구성 요소가 수신하고자 하는 Intent의 유형을 나타낸다.
+  - Activity에 대한 인텐트 필터를 지정하지 않는 경우, 명시적 인텐트를 통해서만 Activity를 시작할 수 있다.
