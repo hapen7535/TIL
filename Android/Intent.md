@@ -15,4 +15,5 @@
 
 ### 인텐트 구성
   - 컴포넌트 이름 : 시작할 구성 요소의 이름. 명시적 인텐트를 사용할 때 필요한 정보다. 이 구성 요소가 없다면 암시적 인텐트가 된다.
-  - Action : 수행할 작업을 나타내는 문자열. setAction(), Intent 생성자를 통해 Action을 지정할 수 있다. 
+  - Action : 수행할 작업을 나타내는 문자열. setAction(), Intent 생성자를 통해 Action을 지정할 수 있다.  ACTION_VIEW(Activity가 사용자에게 표시할 정보를 가지고 있을 때 사용), ACTION_SEND(다른 앱을 통해 공유할 데이터가 있을 때 사용), ACTION_EDIT가 있다.
+  - Data : Action을 수행할 데이터 혹은 데이터의 MIME 유형을 나타내는 URI. * MIME type : 이 데이터가 어떤 형식의 데이터인지 설명하는 이름
