@@ -31,4 +31,10 @@
 
 ### Flag
   - Intent에 대한 메타데이터 역할을 한다. 예를 들어 Android 시스템에 Activity를 어떤 방식으로 시작하는지에 대한 정보(Activity가 어느 Task에 소속되어야 하는지와 같은 정보)를 포함한다.
+  - manifest에서 사용하거나 코드 상에서도 사용할 수 있다.
+  - manifest에서 사용하기
+    - 안드로이드 launchMode 속성 사용
+    - standard : 스택 중에서 어느 곳에서나 있을 수 있다. 여러 개의 인스턴스를 생성할 수 있다.
+    - singleTop : 호출한 Activity와 최상위 Activity가 같을 경우 최상위 Activity가 재사용된다.
+    - singleTask : 루트 Activity로만 존재하며 하나의 인스턴스만 생성가능하다.
  
