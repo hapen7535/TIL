@@ -36,5 +36,8 @@
     - 안드로이드 launchMode 속성 사용
     - standard : 스택 중에서 어느 곳에서나 있을 수 있다. 여러 개의 인스턴스를 생성할 수 있다.
     - singleTop : 호출한 Activity와 최상위 Activity가 같을 경우 최상위 Activity가 재사용된다.
-    - singleTask : 루트 Activity로만 존재하며 하나의 인스턴스만 생성가능하다.
+    - singleTask : 루트 Activity로만 존재하며 하나의 인스턴스만 생성가능하다. 다른 Activity 실행 시 동일 Task 내에서 실행가능하다.
+    - singleInstance : 루트 Activity로만 존재하며 하나의 인스턴스만 생성가능하다. Task 내에 해당되는 하나의 Activity만 포함될 수 있다. 다른 Activity를 실행하면 그 Activity에 포함되는 Task가 새로 생성된다.
  
+ 
+참고 : https://medium.com/@logishudson0218/intent-flag%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4-d8c91ddd3bfc
