@@ -28,5 +28,6 @@ View는 다음과 같은 생명주기를 가진다.
 6. onLayout(boolean, int, int, int, int): View의 자식 뷰들을 배치한다. View의 크기와 위치를 지정하여 화면에 배치한 후에 호출한다. 아직 View가 그려지는 단계는 아니다.  
 7. dispatchToDraw() : View가 다시 그려져야 할 경우 자식 View도 싹 다 다시 그려지게 한다.
 8. onDraw(Canvas): View를 그린다. 이전에 계산된 크기와 위치를 기준으로 View를 그린다. 
+9. onFinishInflate() : 모든 자식 View가 추가된 후 호출된다.
 
 출처 : 찰스의 안드로이드 https://www.charlezz.com/?p=29013
