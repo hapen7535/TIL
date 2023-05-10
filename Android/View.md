@@ -30,4 +30,6 @@ View는 다음과 같은 생명주기를 가진다.
 8. onDraw(Canvas): View를 그린다. 이전에 계산된 크기와 위치를 기준으로 View를 그린다. 
 9. onFinishInflate() : 모든 자식 View가 추가된 후 호출된다.
 
-출처 : 찰스의 안드로이드 https://www.charlezz.com/?p=29013
+참고 : 
+- 찰스의 안드로이드 https://www.charlezz.com/?p=29013
+- https://proandroiddev.com/the-life-cycle-of-a-view-in-android-6a2c4665b95e
