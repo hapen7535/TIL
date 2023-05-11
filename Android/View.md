@@ -29,6 +29,9 @@ View는 다음과 같은 생명주기를 가진다.
 7. dispatchToDraw() : View가 다시 그려져야 할 경우 자식 View도 싹 다 다시 그려지게 한다.
 8. onDraw(Canvas): View를 그린다. 이전에 계산된 크기와 위치를 기준으로 View를 그린다. 
 9. onFinishInflate() : 모든 자식 View가 추가된 후 호출된다.
+10. onSaveInstanceState() : View의 상태를 먼저 저장하기 위해서 ID를 제공해야 한다. 만약 View 계층 구조에서 같은 ID를 가진 View들이 여러 개 있다면 각 View의 고유 ID가 없어지고 상태가 저장된다. 
+
+
 
 참고 : 
 - 찰스의 안드로이드 https://www.charlezz.com/?p=29013
