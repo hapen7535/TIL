@@ -18,6 +18,8 @@ manifest 파일을 보면 아래 구성 요소들을 확인할 수 있다.
   - Content Provider에서 공유하는 것은 파일, 데이터베이스, SharedPreferences가 있다. 이는 CRUD 동작을 기본으로 한다. Content Provider는 insert(), query(), update(), delete() 메소드를 제공한다. 
   - 다른 앱에서는 ContentResolver를 통해서 ContentProvider에 접근할 수 있다.
   - 여러 ContentProvider 구분을 위해, Authority라는 값을 가진다.
+  - Content Provider는 안드로이드 시스템에서 관리되며, 보안 및 권한 관리 기능을 제공하여 데이터의 접근을 제어한다. 그리고 데이터의 공유 범위를 조절하고, 애플리케이션 간의 데이터 보안을 강화한다.
+  - 안드로이드에서는 이미 많은 내장 Content Provider가 제공된다. 주소록, 캘린더, 미디어 파일, 설정 등과 같은 데이터에 대한 접근을 제공한다. 또한 개발자가 직접 커스텀 Content Provider를 구현하여 애플리케이션 간 데이터 공유를 구현할 수도 있다.
 
 
 Activity, Service, Broadcast Receiver는 intent를 통해 활성화된다.  
