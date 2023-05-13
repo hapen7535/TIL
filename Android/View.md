@@ -31,6 +31,8 @@ View는 다음과 같은 생명주기를 가진다.
 9. onFinishInflate() : 모든 자식 View가 추가된 후 호출된다.
 10. onSaveInstanceState() : View의 상태를 먼저 저장하기 위해서 ID를 제공해야 한다. 만약 View 계층 구조에서 같은 ID를 가진 View들이 여러 개 있다면 각 View의 고유 ID가 없어지고 상태가 저장된다. 
 
+Activity 또는 Fragment의 Lifecycle 이벤트에 따라 View의 Lifecycle 메소드가 호출된다. 예를 들어, Activity의 onCreate() 메소드에서 View를 생성하고, Activity의 onDestroy()에서 View를 해제할 수 있다.
+개발자는 View의 Lifecycle을 활용하여 View의 상태 변화에 따라 필요한 작업을 수행할 수 있다.
 
 
 참고 : 
